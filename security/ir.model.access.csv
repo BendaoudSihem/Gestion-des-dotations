@@ -1,0 +1,23 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+
+demo_user, Model user access,gestion_dotation.model_demo_access_rights,gestion_dotation.group_user,1,0,0,0
+access_article_User,article.User,model_product_template,gestion_dotation.group_user,1,1,0,0
+
+access_decherge_User,decharge.User,model_dotation_decharge,gestion_dotation.group_user,1,1,1,1
+access_dotationLigne_User,dotation.User,model_dotation_ligne,gestion_dotation.group_user,1,1,1,1
+
+
+demo_Manger, Model Manger access,gestion_dotation.model_demo_access_rights,gestion_dotation.group_manager,1,0,0,0
+access_article_Manger,article.Manger,model_product_template,gestion_dotation.group_manager,1,1,1,1
+
+access_decherge_Manger,decharge.Manger,model_dotation_decharge,gestion_dotation.group_manager,1,1,1,1
+access_dotationLigne_Manger,dotation.Manger,model_dotation_ligne,gestion_dotation.group_manager,1,1,1,1
+
+
+
+
+
+
+
+

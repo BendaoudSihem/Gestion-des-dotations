@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<odoo>
+ <data>
+ 
+<record model="ir.ui.view" id="dechargeForm">
+ 		<field name="name">Decharge.form</field>
+ 		<field name="model">dotation.decharge</field>
+ 		<field name="type">form</field>
+ 		<field name="arch" type="xml">
+			<form string="Decharge">
+				<header>
+				<button type="object" name="open" string="Valider" style="background:#7c7bad;color:white" groups="base.group_system,gestion_dotation.group_manager"/>/>
+				 <field name="valider" widget="statusbar" statusbar_visible="a,b" clickable="1"/>
+			   </header>
+ 				<sheet>
+	 				<group string="Decharge">
+		 				 <field name="Employe"/>
+						 <field name="date_Dotation"/>
+						 
+						
+
+				    </group>
+				 <group string="Autre information...">
+						<notebook >
+							<page string="Ligne Article">
+								
+								<field name="decharge"/>
+							
+							</page>
+							
+						
+						</notebook>
+		</group>
+			    </sheet>
+
+			</form>
+ 		</field>
+</record>
+
+<record model="ir.ui.view" id="dechargeTree">
+ 		<field name="name">Decharge.tree</field>
+ 		<field name="model">dotation.decharge</field>
+ 		<field name="type">tree</field>
+ 		<field name="arch" type="xml">
+			<tree string="Decharge">
+				 <field name="Employe"/>
+				 <field name="date_Dotation"/>
+				<field name="valider"/>
+ 			    
+
+ 				
+ 			</tree>
+		</field>
+</record>
+
+<record model="ir.actions.act_window" id="actionDecharge">
+ 		<field name="name">Decharge</field>
+ 		<field name="res_model">dotation.decharge</field>
+ 		<field name="view_type">form</field>
+ 		<field name="view_mode">tree,form</field>
+</record>
+
+
+
+
+
+
+<menuitem 
+        name="Gestion des dotations" 
+        id="id_MenuPrincipal" />
+
+<menuitem
+		 id="idSousMenu1" 
+		 parent="id_MenuPrincipal"
+		 name="Dotation management" />
+
+<menuitem 
+	     id="idSousMenu2"
+	     parent="idSousMenu1" 
+	     name="decharge"
+         action="actionDecharge"
+         />
+
+
+ </data>
+</odoo>
